@@ -34,7 +34,11 @@ const PORT = process.env.PORT || 3000;
 async function start() {
   try{
     const url = 'mongodb+srv://yarmosh:hDQnz1gRUwSVdR3d@cluster0.7dlkt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-    await mongoose.connect(url,{useNewUrlParser: true})
+    await mongoose.connect(url,
+      {
+      useUnifiedTopology: true,
+      useNewUrlParser: true
+      })
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
     });
