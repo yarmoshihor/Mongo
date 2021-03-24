@@ -33,7 +33,8 @@ const PORT = process.env.PORT || 3000;
 
 async function start() {
   try{
-    const url = 'mongodb+srv://yarmosh:hDQnz1gRUwSVdR3d@cluster0.7dlkt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+    // const url = 'mongodb+srv://yarmosh:hDQnz1gRUwSVdR3d@cluster0.7dlkt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+    const url = 'mongodb+srv://yarmosh:hDQnz1gRUwSVdR3d@cluster0.7dlkt.mongodb.net/shop'
     await mongoose.connect(url,
       {
       useUnifiedTopology: true,
