@@ -36,8 +36,17 @@ router.get("/:id", async (req, res) => {
   res.render("course", {
     layout: "empty",
     title: `Курс ${course.title}`,
-    course,
+    course: course.toObject()
   });
 });
+
+// router.get('/:id', async (req, res) => {
+//   const course = await Course.findById(req.params.id);
+//   res.render('course', {
+//       layout: 'empty',
+//       title: `Course ${course.title}`,
+//       course: course.toObject()
+//   })
+// })
 
 module.exports = router;
